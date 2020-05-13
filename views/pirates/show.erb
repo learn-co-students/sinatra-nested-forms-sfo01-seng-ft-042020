@@ -1,7 +1,16 @@
-<h1>Display your Pirate here</h1>
+<h1><%= @new_pirate.name%></h1>
+<%= @new_pirate.height%>
+<%= @new_pirate.weight%>
 
 
-<h2>Display your first ship here</h2>
+
+<%@new_pirate.ships.each do |sq|%>
+<h2><%=sq["name"]%></h2>
+<h2><%=sq["type"]%></h2>
+<h2><%=sq["booty"]%></h2><br>
 
 
-<h2>Display your second ship here</h2>
+
+<%end%>
+<h2></h2>
+
